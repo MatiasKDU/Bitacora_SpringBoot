@@ -34,6 +34,18 @@ public class DispositivoRest {
         return ResponseEntity.ok(newDispositivo);
     }
 
+    @PutMapping("/modificar-dispositivo")
+    public ResponseEntity<Dispositivo> updateDispositivo(@PathVariable Long id, @RequestBody Dispositivo dispositivo) {
+        Optional<Dispositivo> existingDispositivo = dispositivoService.findById(id);
+        if (existingDispositivo.isPresent()){
+            dispositivo.setId(id);
+            Dispositivo updatedDispositivo = dispositivoService.save(dispositivo);
+            return ResponseEntity.ok(updatedDispositivo);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @DeleteMapping("eliminar-dispositivo/{id}")
     public ResponseEntity<Void> deleteDispositivo(@PathVariable Long id) {
         Optional<Dispositivo> dispositivo = dispositivoService.findById(id);
