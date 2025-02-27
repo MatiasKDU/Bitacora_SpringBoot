@@ -23,10 +23,10 @@ public class Servidor {
     private String servicios_aplicaciones;
     private TextArea Observacion;
     @ManyToOne
-    @JoinColumn ( name= "id_tipo_sevidor")
+    @JoinColumn ( name= "id_tipo_sevidor", nullable = true)
     private Tipo_Servidor tipo_servidor;
     @ManyToOne
-    @JoinColumn (name="id_proceso_servidor")
+    @JoinColumn (name="id_proceso_servidor", nullable = true)
     private Proceso_Servidor proceso_servidor;
 
     public Servidor(String nombre_servidor, String id_instancia, String estado_instancia, String nombre_cuenta, String ip, Boolean ssh, String estado_usuario, String estado_llave, Boolean llave, String servicios_aplicaciones, TextArea observacion, Tipo_Servidor tipo_servidor, Proceso_Servidor proceso_servidor) {

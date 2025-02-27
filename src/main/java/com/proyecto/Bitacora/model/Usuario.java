@@ -14,7 +14,7 @@ public class Usuario {
     private String correo_tbk;
     private String llave_ssh;
     @ManyToOne
-    @JoinColumn (name = "id_tipousuario")
+    @JoinColumn (name = "id_tipousuario", nullable = true) //Permite que se puedan eliminar independientemente de la relacion
     private Tipo_Usuario tipoUsuario;
 
     // Constructor sin parámetros
