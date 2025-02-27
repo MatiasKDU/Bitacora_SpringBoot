@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/caract_hardware/")
+@RequestMapping ("/api/caract_hardware")
 
 public class Caract_HardwareRest {
 

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/accioncrud/") // de esta forma buscare por la api
+@RequestMapping ("/api/accioncrud") // de esta forma buscare por la api
 
 public class Accion_CrudRest {
 

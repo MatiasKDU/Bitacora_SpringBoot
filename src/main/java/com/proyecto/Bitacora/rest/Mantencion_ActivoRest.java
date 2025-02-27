@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/mantencion_activo/")
+@RequestMapping ("/api/mantencion_activo")
 public class Mantencion_ActivoRest {
 
     @Autowired
