@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/proceso_servidor/")  // Cambié "name" por "value"
+@RequestMapping("/api/proceso_servidor")  // Cambié "name" por "value"
 public class Proceso_ServidorRest {
 
     @Autowired

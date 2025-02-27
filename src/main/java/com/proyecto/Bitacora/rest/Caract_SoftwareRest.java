@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/caract_software/")
+@RequestMapping ("/api/caract_software")
 public class Caract_SoftwareRest {
 
     @Autowired

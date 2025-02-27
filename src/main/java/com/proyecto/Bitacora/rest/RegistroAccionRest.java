@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/registroaccion/")
+@RequestMapping ("/api/registroaccion")
 public class RegistroAccionRest {
 
     @Autowired

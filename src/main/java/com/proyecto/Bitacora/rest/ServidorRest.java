@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping ("/api/servidor/")
+@RequestMapping ("/api/servidor")
 public class ServidorRest {
 
     @Autowired
