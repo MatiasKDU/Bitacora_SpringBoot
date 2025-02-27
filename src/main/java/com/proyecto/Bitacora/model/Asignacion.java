@@ -8,7 +8,7 @@ public class Asignacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @ManyToOne
     @JoinColumn (name = "id_usuario", nullable = true)
     private Usuario usuario;
@@ -16,19 +16,20 @@ public class Asignacion {
     @JoinColumn(name = "id_activo", nullable = true)
     private Activo activo;
 
-    public Asignacion(Usuario usuario, Activo activo) {
-        this.usuario = usuario;
-        this.activo = activo;
-    }
     // Constructor sin parámetros
     public Asignacion() {
     }
 
-    public int getId() {
+    public Asignacion(Usuario usuario, Activo activo) {
+        this.usuario = usuario;
+        this.activo = activo;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
