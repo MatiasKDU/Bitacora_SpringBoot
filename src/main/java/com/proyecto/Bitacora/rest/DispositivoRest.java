@@ -34,8 +34,19 @@ public class DispositivoRest {
         return ResponseEntity.ok(newDispositivo);
     }
 
-    //falta put - modificar
+    @DeleteMapping("eliminar-dispositivo/{id}")
+    public ResponseEntity<Void> deleteDispositivo(@PathVariable Long id) {
+        Optional<Dispositivo> dispositivo = dispositivoService.findById(id);
+        if(dispositivo.isPresent()){
+            dispositivoService.deleteById(id);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
+    //falta put - modificar
+// sdadasdas
 
     //falta delete - eliminar
 
