@@ -11,7 +11,7 @@ public class Caract_Software {
     private Long id;
     private int numero_anydesk;
     @ManyToOne
-    @JoinColumn (name="id_sistema_operativo")
+    @JoinColumn (name="id_sistema_operativo", nullable = true)
     private Sistema_Operativo sistema_operativo;
 
     public Caract_Software() {

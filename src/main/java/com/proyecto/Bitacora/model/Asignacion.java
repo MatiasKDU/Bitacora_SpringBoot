@@ -10,10 +10,10 @@ public class Asignacion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
-    @JoinColumn (name = "id_usuario")
+    @JoinColumn (name = "id_usuario", nullable = true)
     private Usuario usuario;
     @ManyToOne
-    @JoinColumn(name = "id_activo")
+    @JoinColumn(name = "id_activo", nullable = true)
     private Activo activo;
 
     public Asignacion(Usuario usuario, Activo activo) {

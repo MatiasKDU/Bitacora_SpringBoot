@@ -17,22 +17,22 @@ public class Activo {
     private LocalDate fecha_compromiso;
     private LocalDate fecha_ingreso;
     @ManyToOne
-    @JoinColumn (name = "id_computador")
+    @JoinColumn (name = "id_computador", nullable = true)
     private Computador computador;
     @ManyToOne
-    @JoinColumn (name = "id_servidor")
+    @JoinColumn (name = "id_servidor", nullable = true)
     private Servidor servidor;
     @ManyToOne
-    @JoinColumn (name = "id_dispositivo")
+    @JoinColumn (name = "id_dispositivo", nullable = true)
     private Dispositivo dispositivo;
     @ManyToOne
-    @JoinColumn (name = "id_estado_activo")
+    @JoinColumn (name = "id_estado_activo", nullable = true)
     private Estado_Activo estado_activo;
     @ManyToOne
-    @JoinColumn (name= "id_licencia")
+    @JoinColumn (name= "id_licencia", nullable = true)
     private Licencia licencia;
     @ManyToOne
-    @JoinColumn (name= "id_mantencion_activo")
+    @JoinColumn (name= "id_mantencion_activo", nullable = true)
     private Mantencion_Activo mantencion_activo;
     // Constructor sin parámetros
     public Activo() {
