@@ -10,23 +10,27 @@ public class Usuario {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String apellido;
+    private String password;
     private String correo;
     private String correo_tbk;
     private String llave_ssh;
     @ManyToOne
-    @JoinColumn (name = "id_tipousuario", nullable = true)
+    @JoinColumn (name = "id_tipousuario", nullable = true) //Permite que se puedan eliminar independientemente de la relacion
     private Tipo_Usuario tipoUsuario;
 
-    // Constructor sin parámetros
-    public Usuario() {
-    }
-
-    public Usuario(String nombre, String correo, String correo_tbk, String llave_ssh, Tipo_Usuario tipoUsuario) {
+    public Usuario(String nombre, String apellido, String password, String correo, String correo_tbk, String llave_ssh, Tipo_Usuario tipoUsuario) {
         this.nombre = nombre;
+        this.apellido = apellido;
+        this.password = password;
         this.correo = correo;
         this.correo_tbk = correo_tbk;
         this.llave_ssh = llave_ssh;
         this.tipoUsuario = tipoUsuario;
+    }
+
+    // Constructor sin parámetros
+    public Usuario() {
     }
 
     public Long getId() {
@@ -43,6 +47,22 @@ public class Usuario {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCorreo() {
