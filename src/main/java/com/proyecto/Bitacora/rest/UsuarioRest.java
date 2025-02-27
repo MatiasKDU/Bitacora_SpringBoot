@@ -1,5 +1,6 @@
 package com.proyecto.Bitacora.rest;
 
+import com.proyecto.Bitacora.model.Servidor;
 import com.proyecto.Bitacora.model.Usuario;
 import com.proyecto.Bitacora.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class UsuarioRest {
         return ResponseEntity.ok(newUsuario);
     }
 
-    // Para poder mdificar un usuario existente
+    // Para poder modificar un usuario existente
     @PutMapping("/modificar-usuario/{id}")
     public ResponseEntity<Usuario> updateUsuario(@PathVariable Long id, @RequestBody Usuario usuario) {
         Optional<Usuario> existingUsuario = usuarioService.findById(id);
@@ -60,4 +61,7 @@ public class UsuarioRest {
             return ResponseEntity.notFound().build();
         }
     }
+
+
+
 }
