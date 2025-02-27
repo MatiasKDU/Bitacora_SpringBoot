@@ -17,11 +17,11 @@ public class Computador {
     private Boolean disponibilidad;
 
     @ManyToOne
-    @JoinColumn (name= "id_caract_software")
+    @JoinColumn (name= "id_caract_software", nullable = true)
     private Caract_Hardware caract_hardware;
 
     @ManyToOne
-    @JoinColumn (name= "id_caract_hardware")
+    @JoinColumn (name= "id_caract_hardware", nullable = true)
     private Caract_Software caract_software;
 
     // Constructor sin parámetros

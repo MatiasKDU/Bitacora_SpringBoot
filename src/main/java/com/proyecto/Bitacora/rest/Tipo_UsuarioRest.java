@@ -50,7 +50,7 @@ public class Tipo_UsuarioRest {
         }
     }
 
-    @DeleteMapping("/eliminar-tipousuario/¨{id}")
+    @DeleteMapping("/eliminar-tipousuario/{id}")
     public ResponseEntity<Void> deleteTipo_Usuario(@PathVariable Long id) {
         Optional<Tipo_Usuario> tipo_usuario = tipo_usuarioService.findById(id);
         if (tipo_usuario.isPresent()) {

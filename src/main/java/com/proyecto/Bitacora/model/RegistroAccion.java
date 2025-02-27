@@ -15,13 +15,13 @@ public class RegistroAccion {
     private LocalDateTime fecha_hora;
 
     @ManyToOne // relacion muchos a uno
-    @JoinColumn (name = "id_accion_crud") // se unira a la tabla accion_crud
+    @JoinColumn (name = "id_accion_crud", nullable = true) // se unira a la tabla accion_crud
     private Accion_Crud accionCrud; // llave foranea - pk a Accion_Crud
     @ManyToOne
-    @JoinColumn (name = "id_usuario")
+    @JoinColumn (name = "id_usuario", nullable = true)
     private Usuario usuario; // llave foranea - pk a Usuario
     @ManyToOne
-    @JoinColumn (name = "id_activo")
+    @JoinColumn (name = "id_activo", nullable = true)
     private Activo activo; // llave foranea - pk a Activo
 
     // Constructor sin parámetros
