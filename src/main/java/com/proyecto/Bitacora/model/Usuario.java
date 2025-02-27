@@ -10,6 +10,8 @@ public class Usuario {
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String apellido;
+    private String password;
     private String correo;
     private String correo_tbk;
     private String llave_ssh;
