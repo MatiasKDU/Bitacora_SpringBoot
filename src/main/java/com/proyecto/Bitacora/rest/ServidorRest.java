@@ -23,8 +23,10 @@ public class ServidorRest {
     private ResponseEntity<List<Servidor>> getAllServidor(){
         return ResponseEntity.ok(servidorService.findAll());
     }
-    // Para obtener un usuario por ID
-    @GetMapping("/obtener-usuario/{id}")
+
+
+    // Para obtener un servidor por ID
+    @GetMapping("/obtener-servidor/{id}")
     public ResponseEntity<Servidor> getServidor(@PathVariable Long id) {
         Optional<Servidor> servidor = servidorService.findById(id);
         return servidor.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -64,7 +66,7 @@ public class ServidorRest {
 
 
 
-//todook..
+
 
 
     }
