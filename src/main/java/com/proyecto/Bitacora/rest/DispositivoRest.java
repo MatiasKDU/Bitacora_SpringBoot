@@ -1,3 +1,4 @@
+
 package com.proyecto.Bitacora.rest;
 
 import com.proyecto.Bitacora.model.Computador;
@@ -56,10 +57,8 @@ public class DispositivoRest {
             return ResponseEntity.notFound().build();
         }
     }
-//asdlkasdkjasdk
-    //falta put - modificar
-// sdadasdas
-
-    //falta delete - eliminar
 
 }
+
+
+
